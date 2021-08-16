@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Bank</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center text-5xl mx-auto mt-16 font-medium">
+        Welcome to <span class="text-blue-600 font-semibold">My Bank</span>
+      </h1>
+    </header>
+    <main class="mx-auto">
+      <section class="mx-auto mt-8 bg-blue-300 w-3/4 p-8">
+        <h3 class="mb-4 text-2xl font-medium">Please Login</h3>
+        <div>
+          <input
+            class="w-3/4 block rounded border-gray-400 mb-4 px-2 p-1"
+            id="user-email"
+            type="email"
+            name=""
+            id=""
+            placeholder="your email"
+          />
+          <input
+            class="w-3/4 block rounded border-gray-400 mb-4 px-2 p-1"
+            id="user-password"
+            type="password"
+            name=""
+            id=""
+            placeholder="your password"
+          />
+          <button
+            class="text-white bg-yellow-600 px-4 rounded py-2 text-semibold"
+            id="login"
+          >
+            Submit
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- Login Button Event Handler -->
+    <script>
+      document.getElementById("login").addEventListener("click", function () {
+        // get user email
+        const emailField = document.getElementById("user-email");
+        const userEmail = emailField.value;
+        // get user password
+        const passwordField = document.getElementById("user-password");
+        const userPassword = passwordField.value;
+
+        //   check user email and password
+        if (
+          userEmail == "moinuddin@gmail.com" &&
+          userPassword == "samratmoin"
+        ) {
+          window.location.href = "banking.html";
+        }
+      });
+    </script>
+  </body>
+</html>
